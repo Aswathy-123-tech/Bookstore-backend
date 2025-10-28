@@ -213,9 +213,9 @@ exports.makePaymentController = async (req, res) => {
             // make payment
             mode: "payment",
             // if payment success-url
-            success_url: "http://localhost:5173/payment-success",
+            success_url: "https://bookstore-theta-seven.vercel.app/payment-success",
             // if failed
-            cancel_url: "http://localhost:5173/payment-error"
+            cancel_url: "https://bookstore-theta-seven.vercel.app/payment-error"
         });
         console.log(session);
         res.status(200).json({ url:session.url})
